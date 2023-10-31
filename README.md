@@ -48,7 +48,7 @@ As noted in the **Background** section above, setting the folder type via **desk
 
 **Note**: Sometimes the **Done** message pops up behind another open window. If that happens, you should see the SetFolderType icon on the taskbar, where you can click to bring that dialog to the front. Alternativey, you can minimize the window(s) that are on top of the dialog.
 
-**Note**: If you move **SetFolderType.exe** after installing, the context menu entries will do nothing because the exe path will be incorrect. To fix that issue, just double-click **SetFolderType.exe** again to reset the context menu entries.
+**Note**: If you move **SetFolderType.exe** after installing, the context menu entries will do nothing because the exe path will be incorrect. To fix that issue, just run the install again (as descibed in Step 5 above).
 
 **Note**: To install or remove via the command line, use the command `SetFolderType /install` or `SetFolderType /remove`.
 
@@ -98,7 +98,7 @@ If the MUI file is found, the Install/Remove dialog will appear in the correct l
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b0d72b29-3721-47e1-9238-ef42a8346034)
 
-**Note**: On Windows 10, the file **C:\Windows\System32\vi-VN\Shell32.dll.mui** may be missing. Without this file, SetFolderType will not be able to provide a **Vietnamese** display. One way to fix this issue is to copy the missing file from a Windows 11 computer that has the Vietnamese language installed.
+**Note for Vietnamese**: On Windows 10, the file **C:\Windows\System32\vi-VN\Shell32.dll.mui** may be missing. Without this file, SetFolderType will not be able to provide a **Vietnamese** display. One way to fix this issue is to copy the missing file from a Windows 11 computer that has the Vietnamese language installed.
 \
 \
 [![image](https://user-images.githubusercontent.com/79026235/153264696-8ec747dd-37ec-4fc1-89a1-3d6ea3259a95.png)](https://github.com/LesFerch/SetFolderType)
