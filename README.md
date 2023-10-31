@@ -100,7 +100,7 @@ SetFolderType will detect your Windows language and use it, as long as it can fi
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/ed823d95-607b-45c8-b97a-8d20bcfca42e)
 
-This error often occurs if you just installed a new language. Windows sometimes takes a long time to populate the language folder with the MUI files. Sometimes you just have to wait a few minutes. Other times, the MUI files don't show up until you run WIndows Update. For some reason, just running Windows Update to check and/or get the latest updates forces the language installation to complete.
+This error often occurs if you just installed a new language. Windows sometimes takes a long time to populate the language folder with the MUI files. Sometimes you just have to wait a few minutes. Other times, the MUI files don't show up until you run Windows Update. For some reason, just running Windows Update to check and/or get the latest updates forces the language installation to complete.
 
 If you get that error but are OK with English, you may click **OK** and continue to install the tool with English context menu entries. If the missing MUI file is added later, you can simply double-click **SetFolderType.exe** again to install it in the correct language. The install always removes any of its previous context menu entries before creating new ones.
 
