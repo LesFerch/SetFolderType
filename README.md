@@ -1,12 +1,14 @@
 # SetFolderType
 
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/17bc7a7e-d77b-4720-9d22-68c6fd7e13da)
+
 [![image](https://user-images.githubusercontent.com/79026235/152910441-59ba653c-5607-4f59-90c0-bc2851bf2688.png)Download the zip file](https://github.com/LesFerch/SetFolderType/releases/download/1.0.0/SetFolderType.zip)
 
 ## Set Windows Explorer folder types using Desktop.ini files
 
 This program adds a right-click context menu to Windows Explorer that allows you to set the folder type for an entire folder tree by creating (or editing existing) **desktop.ini** files in each folder.
 
-The added context menu is created with registry entries only and simply provides submenus entries for each folder type. When one of those items are selected, SetFolderType.exe is run with the appropriate arguments to set the selected folder type for the selected folder tree.
+The SetFolderType context menu item is created with registry entries only and simply provides submenus entries for each folder type. When one of those items are selected, SetFolderType.exe is run with the appropriate arguments to set the selected folder type for the selected folder tree.
 
 This program does NOT create a context menu handler. That is, there is no code that runs when you right-click a folder. Code only runs when you actually select an action (i.e. select a folder type that you want applied). SetFolderType will add no overhead to your context menu, other than the insignificant impact of one more context menu item.
 
@@ -28,7 +30,7 @@ The fix is partial because, as noted above, it only applies to drives of type **
 
 ### Permanent folder type setting for both Windows 10 and Windows 11
 
-For **Windows 10** (or older) or [Windows 10 Explorer on Windows 11](https://lesferch.github.io/OldExplorer/), the **Also apply this template to all subfolders** feature works fine, but there is still a scenario wher you may want this tool.
+For **Windows 10** or [Windows 10 Explorer on Windows 11](https://lesferch.github.io/OldExplorer/), the feature **Also apply this template to all subfolders** works fine, but there is still a scenario wher you may want this tool.
 
 As noted in the **Background** section above, setting the folder type via **desktop.ini** files makes the folder type setting permanent because it's part of the folder, instead of just a registry setting.
 
@@ -42,13 +44,24 @@ As noted in the **Background** section above, setting the folder type via **desk
 6. If you skipped step 3, then, in the SmartScreen window, click More info and then Run anyway.
 7. Click **OK** when the **Done** message boc appears.
 
-**Note**: Some antivirus software may falsely detect the download as a virus. This can happen anytime you download a new executable and may require extra steps to whitelist the file.
+**Note**: Some antivirus software may falsely detect the download as a virus. This can happen any time you download a new executable and may require extra steps to whitelist the file.
 
 # How to Use
 
 Right-click any folder and you should see the SetFolderType context menu:
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/353cb8a6-5d36-41cb-aecc-8051815c3a01)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/17bc7a7e-d77b-4720-9d22-68c6fd7e13da)
+
+Select the folder type you want applied to the folder. This will create (or edit any existing) **desktop.ini** file in ein the selected folder and ALL of its subfolders, all the way down the tree.
+
+# Patience!
+
+Although SetFolderType is very fast at populating all the subfolders with **desktop.ini** files, it's up to Explorer to update the view. Explorer does that in that background as it notices the addition (or change) of the desktop.ini files. How long it will take is variable. It depends on the speed of the computer, what other processes are running, how many folders are affected, and so forth. But it can often take 30 seconds or so for all the folder views to update. So, before you jump onto GitHub and post an issue, relax, do something else for a minute and then go back and check your folder. You should see that Explorer did its thing and updated the view. 
+
+## The view won't change if you're looking at it!
+
+Explorer will not update the folder's view until the folder is closed. However, having an open folder only stops the view update for that particular folder level. The subfolder's views will update even if you have the parent folder open.
+
 
 \
 \
