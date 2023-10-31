@@ -86,7 +86,11 @@ If the target folder is not both a **Local Disk** and **NTFS** an error message,
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b5acfe58-ed9a-416c-912d-922b4d1c6c10)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b3381f2e-07ee-485e-b6c6-ab19e66f115f)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/0b1a0d4d-6e27-445f-91c1-f819bcef745f)
 
-## It's Multilingual!
+## Remove Desktop.ini Files
+
+If you select **(None)** from the context menu, SetFolderType will remove all desktop.ini files from the entire selected folder tree. This will work on all drive types and files systems. The check for Local Disk and NTFS is skipped for this action.
+
+# It's Multilingual!
 
 Here's an example of SetFolderType installed for German (de-DE):
 
@@ -105,6 +109,10 @@ If the MUI file is found, the Install/Remove dialog will appear in the correct l
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b0d72b29-3721-47e1-9238-ef42a8346034)
 
 **Note for Vietnamese**: On Windows 10, the file **C:\Windows\System32\vi-VN\Shell32.dll.mui** may be missing. Without this file, SetFolderType will not be able to provide a **Vietnamese** display. One way to fix this issue is to copy the missing file from a Windows 11 computer that has the Vietnamese language installed.
+
+# Help!
+
+Selecting **Help** from the context menu opens this Readme file.
 \
 \
 [![image](https://user-images.githubusercontent.com/79026235/153264696-8ec747dd-37ec-4fc1-89a1-3d6ea3259a95.png)](https://github.com/LesFerch/SetFolderType)
