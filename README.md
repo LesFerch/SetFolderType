@@ -2,8 +2,6 @@
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/17bc7a7e-d77b-4720-9d22-68c6fd7e13da)
 
-[![image](https://user-images.githubusercontent.com/79026235/152910441-59ba653c-5607-4f59-90c0-bc2851bf2688.png)Download the zip file](https://github.com/LesFerch/SetFolderType/releases/download/1.0.0/SetFolderType.zip)
-
 ## Set Windows Explorer folder types using Desktop.ini files
 
 This program adds a right-click context menu to Windows Explorer that allows you to set the folder type for an entire folder tree by creating (or editing existing) **desktop.ini** files in each folder.
@@ -32,9 +30,11 @@ The fix is partial because, as noted above, it only applies to drives of type **
 
 For **Windows 10** (or [Windows 10 Explorer on Windows 11](https://lesferch.github.io/OldExplorer/)), the feature **Also apply this template to all subfolders** works fine, but there is still a scenario wher you may want this tool.
 
-As noted in the **Background** section above, setting the folder type via **desktop.ini** files makes the folder type setting permanent because it's part of the folder, instead of just a registry setting.
+As noted in the **Background** section above, setting the folder type via **desktop.ini** files makes the folder type setting *permanent* because it's part of the folder, instead of just a registry setting.
 
 # How to Download and Install
+
+[![image](https://user-images.githubusercontent.com/79026235/152910441-59ba653c-5607-4f59-90c0-bc2851bf2688.png)Download the zip file](https://github.com/LesFerch/SetFolderType/releases/download/1.0.0/SetFolderType.zip)
 
 **Note**: Some antivirus software may falsely detect the download as a virus. This can happen any time you download a new executable and may require extra steps to whitelist the file.
 
