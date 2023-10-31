@@ -71,19 +71,23 @@ Explorer will not update the folder's view until the folder is closed. However, 
 ## The target folder must be on a Local Disk that's formatted NTFS
 
 If the target folder is not both a **Local Disk** and **NTFS** an error message, indicating which criteria are met (or not) will be displayed. Here's all three error possibilities:
+
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b5acfe58-ed9a-416c-912d-922b4d1c6c10)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b3381f2e-07ee-485e-b6c6-ab19e66f115f)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/0b1a0d4d-6e27-445f-91c1-f819bcef745f)
 
 ## It's Multilingual!
 
 Here's an example of SetFolderType installed for German (de-DE):
+
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/339b4cd1-026d-40cd-ab8d-8eabb115996d)
 
 SetFolderType will detect your Windows language and use it, as long as it can find the **Shell32.dll.mui** file for your current language. If that file is missing, you will see this error:
+
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/21294f1a-7914-4886-a131-53b2e7073ed9)
 
 If you get that error, you may click **OK** and continue to install the tool with English context menu entries. If later the missing file issue is resolved, you can simply double-click **SetFolderType.exe** again to install it in the correct language. There is no need to remove first. The install always removes any of its previous context menu entries before creating new ones.
 
 If the MUI file is found, the Install/Remove dialog will appear in the correct language:
+
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b0d72b29-3721-47e1-9238-ef42a8346034)
 \
 \
