@@ -6,10 +6,6 @@
 
 This program adds a right-click context menu to Windows Explorer that allows you to set the folder type for an entire folder tree by creating (or editing existing) **desktop.ini** files in each folder.
 
-The context menu item is created with registry entries only and simply provides submenus entries for each folder type. When one of those items are selected, SetFolderType.exe is run with the appropriate arguments to set the selected folder type for the selected folder tree.
-
-This program does NOT create a context menu handler. That is, there is no code that runs when you right-click a folder. Code only runs when you actually select an action (i.e. select a folder type that you want applied). SetFolderType will add no overhead to your context menu, other than the insignificant impact of one more context menu item.
-
 ## Why set folder types using Desktop.ini files?
 
 ### Background Information
@@ -51,6 +47,12 @@ As noted in the **Background** section above, setting the folder type via **desk
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/500adf4d-b7f6-447b-ab13-5d8e580a7f96)
 
 **Note**: Sometimes the **Done** message pops up behind another open window. If that happens, you should see the SetFolderType icon on the taskbar, where you can click to bring that dialog to the front. Alternativey, you can minimize the window(s) that are on top of the dialog.
+
+### About the context menu
+
+The context menu item is created with registry entries only and simply provides submenus entries for each folder type. When one of those items are selected, SetFolderType.exe is run with the appropriate arguments to set the selected folder type for the selected folder tree.
+
+This program does NOT create a context menu handler. That is, there is no code that runs when you right-click a folder. Code only runs when you actually select an action (i.e. select a folder type that you want applied). SetFolderType will add no overhead to your context menu, other than the insignificant impact of one more context menu item.
 
 # How to Use
 
