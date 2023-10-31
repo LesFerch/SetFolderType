@@ -48,6 +48,10 @@ As noted in the **Background** section above, setting the folder type via **desk
 
 **Note**: Sometimes the **Done** message pops up behind another open window. If that happens, you should see the SetFolderType icon on the taskbar, where you can click to bring that dialog to the front. Alternativey, you can minimize the window(s) that are on top of the dialog.
 
+**Note**: If you move **SetFolderType.exe** after installing, the context menu entries will do nothing because the exe path will be incorrect. To fix that issue, just double-click **SetFolderType.exe** again to reset the context menu entries.
+
+**Note**: To install or remove via the command line, use the command `SetFolderType /install` or `SetFolderType /remove`.
+
 ### About the context menu
 
 The context menu item is created with registry entries only and simply provides submenus entries for each folder type. When one of those items are selected, SetFolderType.exe is run with the appropriate arguments to set the selected folder type for the selected folder tree.
