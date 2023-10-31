@@ -90,11 +90,15 @@ SetFolderType will detect your Windows language and use it, as long as it can fi
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/21294f1a-7914-4886-a131-53b2e7073ed9)
 
-If you get that error, you may click **OK** and continue to install the tool with English context menu entries. If later the missing file issue is resolved, you can simply double-click **SetFolderType.exe** again to install it in the correct language. There is no need to remove first. The install always removes any of its previous context menu entries before creating new ones.
+This error often occurs if you just installed a new language. Windows sometimes takes a long time to populate the language folder with the MUI files. Sometimes you just have to wait a few minutes. Other times, the MUI files don't show up until you run WIndows Update. For some reason, just running Windows Update to check and/or get teh latest updates forces the language installation to comlete.
+
+If you get that error but are OK with English, you may click **OK** and continue to install the tool with English context menu entries. If the missing file is added later, you can simply double-click **SetFolderType.exe** again to install it in the correct language. The install always removes any of its previous context menu entries before creating new ones.
 
 If the MUI file is found, the Install/Remove dialog will appear in the correct language:
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b0d72b29-3721-47e1-9238-ef42a8346034)
+
+**Note**: On Windows 10, the file **C:\Windows\System32\vi-VN\Shell32.dll.mui** may be missing. Without this file, SetFolderType will not be able to provide a **Vietnamese** display. One way to fix this issue is to copy the missing file from a Windows 11 computer that has the Vietnamese language installed.
 \
 \
 [![image](https://user-images.githubusercontent.com/79026235/153264696-8ec747dd-37ec-4fc1-89a1-3d6ea3259a95.png)](https://github.com/LesFerch/SetFolderType)
