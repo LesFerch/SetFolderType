@@ -50,7 +50,13 @@ As noted in the **Background** section above, setting the folder type via **desk
 
 **Note**: If you move **SetFolderType.exe** after installing, the context menu entries will do nothing because the exe path will be incorrect. To fix that issue, just run the install again (as descibed in Step 5 above).
 
-**Note**: To install or remove via the command line, use the command `SetFolderType /install` or `SetFolderType /remove`.
+### Command line Installation and Removal
+
+If you wish to install or remove the tool via the command line, usse these commands:
+
+`SetFolderType /install`
+
+`SetFolderType /remove`
 
 ### About the context menu
 
