@@ -1,6 +1,6 @@
 # SetFolderType
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/17bc7a7e-d77b-4720-9d22-68c6fd7e13da)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/8462baf2-e131-436b-954e-ff7ee58b8c88)
 
 ## Set Windows Explorer folder types using Desktop.ini files
 
@@ -42,9 +42,9 @@ As noted in the **Background** section above, setting the folder type via **desk
 6. If you skipped step 3, then, in the SmartScreen window, click **More info** and then **Run anyway**.
 7. Click **OK** when the **Done** message box appears.
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/29ea99bd-201b-48cb-896a-cd85b4242088)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/dcb5f615-2a8f-4720-89c9-8500723aa8f5)
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/500adf4d-b7f6-447b-ab13-5d8e580a7f96)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/f753f911-7e3a-40ce-83bc-8674cd05f873)
 
 **Note**: Sometimes the **Done** message pops up behind another open window. If that happens, you should see the SetFolderType icon on the taskbar, where you can click to bring that dialog to the front. Alternativey, you can minimize the window(s) that are on top of the dialog.
 
@@ -68,7 +68,7 @@ This program does NOT create a context menu handler. That is, there is no code t
 
 Right-click any folder and you should see the SetFolderType context menu:
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/17bc7a7e-d77b-4720-9d22-68c6fd7e13da)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/8462baf2-e131-436b-954e-ff7ee58b8c88)
 
 Select the folder type you want applied to the folder. This will create (or edit any existing) **desktop.ini** file in the selected folder and ALL of its subfolders, all the way down the tree.
 
@@ -84,7 +84,7 @@ Explorer will not update the folder's view until the folder is closed. However, 
 
 If the target folder is not both a **Local Disk** and **NTFS** an error message, indicating which criteria are met (or not) will be displayed. Here's all three error possibilities:
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b5acfe58-ed9a-416c-912d-922b4d1c6c10)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b3381f2e-07ee-485e-b6c6-ab19e66f115f)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/0b1a0d4d-6e27-445f-91c1-f819bcef745f)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/e5087ec9-1d2b-448a-b27a-f68cc6143828)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/214496f2-05a8-4287-9c1a-63617758b3a8)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/024cb983-49b6-4c0e-a6a8-28e5eab51d8f)
 
 ## Remove Desktop.ini Files
 
@@ -94,11 +94,11 @@ If you select **(None)** from the context menu, SetFolderType will remove all de
 
 Here's an example of SetFolderType installed for German (de-DE):
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/339b4cd1-026d-40cd-ab8d-8eabb115996d)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/a8bc53e2-80b8-4717-877c-1fcea1e8334d)
 
 SetFolderType will detect your Windows language and use it, as long as it can find the **Shell32.dll.mui** file for your current language. If that file is missing, you will see this error:
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/21294f1a-7914-4886-a131-53b2e7073ed9)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/ed823d95-607b-45c8-b97a-8d20bcfca42e)
 
 This error often occurs if you just installed a new language. Windows sometimes takes a long time to populate the language folder with the MUI files. Sometimes you just have to wait a few minutes. Other times, the MUI files don't show up until you run WIndows Update. For some reason, just running Windows Update to check and/or get the latest updates forces the language installation to comlete.
 
@@ -106,7 +106,7 @@ If you get that error but are OK with English, you may click **OK** and continue
 
 If the MUI file is found, the Install/Remove dialog will appear in the correct language:
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/b0d72b29-3721-47e1-9238-ef42a8346034)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/4fa9adbd-3cf3-4e89-aff2-023f5d7472db)
 
 **Note for Vietnamese**: On Windows 10, the file **C:\Windows\System32\vi-VN\Shell32.dll.mui** may be missing. Without this file, SetFolderType will not be able to provide a **Vietnamese** display. One way to fix this issue is to copy the missing file from a Windows 11 computer that has the Vietnamese language installed.
 
