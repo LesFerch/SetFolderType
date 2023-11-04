@@ -46,7 +46,7 @@ As noted in the **Background** section above, setting the folder type via **desk
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/f753f911-7e3a-40ce-83bc-8674cd05f873)
 
-**Note**: Sometimes the **Done** message pops up behind another open window. If that happens, you should see the SetFolderType icon on the taskbar, where you can click to bring that dialog to the front. Alternativey, you can minimize the window(s) that are on top of the dialog.
+**Note**: Sometimes the **Done** message pops up behind another open window. If that happens, you should see the SetFolderType icon on the taskbar, where you can click to bring that dialog to the front. Alternatively, you can minimize the window(s) that are on top of the dialog.
 
 **Note**: If you move **SetFolderType.exe** after installing, the context menu entries will do nothing because the exe path will be incorrect. To fix that issue, just run the install again (as descibed in Step 5 above).
 
