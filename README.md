@@ -82,7 +82,7 @@ Explorer will not update the folder's view until the folder is closed. However, 
 
 ## The target folder must be on a Local Disk that's formatted NTFS
 
-If the target folder is not both a **Local Disk** and **NTFS** an error message, indicating which criteria are met (or not) will be displayed. Here's all three error possibilities:
+If the target folder is not both a **Local Disk** and **NTFS**, an error message, indicating which criteria are met (or not), will be displayed. Here's all three error possibilities:
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/e5087ec9-1d2b-448a-b27a-f68cc6143828)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/214496f2-05a8-4287-9c1a-63617758b3a8)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/024cb983-49b6-4c0e-a6a8-28e5eab51d8f)
 
