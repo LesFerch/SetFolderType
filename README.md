@@ -74,7 +74,7 @@ Select the folder type you want applied to the folder. This will create (or edit
 
 ## Patience!
 
-Although SetFolderType is very fast at populating all the subfolders with **desktop.ini** files, it's up to Explorer to update the view. Explorer does that in that background as it notices the addition (or change) of the desktop.ini files. How long it will take is variable. It depends on the speed of the computer, what other processes are running, how many folders are affected, and so forth. But it can often take 30 seconds or so for all the folder views to update. So, before you jump onto GitHub and post an issue, relax, do something else for a minute and then go back and check your folders. You should see that Explorer did its thing and updated the view. 
+Although SetFolderType is very fast at populating all the subfolders with **desktop.ini** files, it's up to Explorer to update the view. Explorer does that in the background as it notices the addition (or change) of the desktop.ini files. How long it will take is variable. It depends on the speed of the computer, what other processes are running, how many folders are affected, and so forth. But it can often take 30 seconds or so for all the folder views to update. So, before you jump onto GitHub and post an issue, relax, do something else for a minute and then go back and check your folders. You should see that Explorer did its thing and updated the view. 
 
 ## The view won't change if you're looking at it!
 
