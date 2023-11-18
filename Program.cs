@@ -253,7 +253,7 @@ namespace SetFolderType
 
             string exePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
 
-            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(@"Software\Classes\Directory\shell\SetFolderType"))
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey($@"Software\Classes\Directory\shell\{myName}"))
             {
                 key.SetValue("SubCommands", "");
                 key.SetValue("", "");
@@ -263,7 +263,7 @@ namespace SetFolderType
 
             for (int i = 0; i < labels.Length; i++)
             {
-                using (RegistryKey subKey = Registry.CurrentUser.CreateSubKey($@"Software\Classes\Directory\shell\SetFolderType\shell\{i}-{types[i]}"))
+                using (RegistryKey subKey = Registry.CurrentUser.CreateSubKey($@"Software\Classes\Directory\shell\{myName}\shell\{i}-{types[i]}"))
                 {
                     subKey.SetValue("", labels[i]);
 
@@ -279,7 +279,7 @@ namespace SetFolderType
         {
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Classes\Directory\shell", true))
             {
-                try { key.DeleteSubKeyTree("SetFolderType", false); }
+                try { key.DeleteSubKeyTree(myName, false); }
                 catch { }
             }
         }
