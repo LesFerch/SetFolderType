@@ -83,6 +83,8 @@ namespace SetFolderType
 
         static void Main(string[] args)
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             lang = GetLang();
             if (lang.Substring(0, 2) != "en") { GetStrings(); }
 
