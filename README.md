@@ -42,9 +42,9 @@ As noted in the **Background** section above, setting the folder type via **desk
 6. If you skipped step 3, then, in the SmartScreen window, click **More info** and then **Run anyway**.
 7. Click **OK** when the **Done** message box appears.
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/dcb5f615-2a8f-4720-89c9-8500723aa8f5)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/76c1791b-12ff-4df1-a6ed-b5555389147f)
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/f753f911-7e3a-40ce-83bc-8674cd05f873)
+![image](https://github.com/LesFerch/SetFolderType/assets/79026235/4176f8c5-78cc-41b8-ab63-0f53a918f891)
 
 **Note**: Sometimes the **Done** message pops up behind another open window. If that happens, you should see the SetFolderType icon on the taskbar, where you can click to bring that dialog to the front. Alternatively, you can minimize the window(s) that are on top of the dialog.
 
