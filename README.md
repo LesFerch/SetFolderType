@@ -28,7 +28,7 @@ For **Windows 10** (or [Windows 10 Explorer on Windows 11](https://lesferch.gith
 
 As noted in the **Background** section above, setting the folder type via **desktop.ini** files makes the folder type setting *permanent* because it's part of the folder, instead of just a registry setting.
 
-# How to Download and Install
+## How to Download and Install
 
 [![image](https://user-images.githubusercontent.com/79026235/152910441-59ba653c-5607-4f59-90c0-bc2851bf2688.png)Download the zip file](https://github.com/LesFerch/SetFolderType/releases/download/1.0.2/SetFolderType.zip)
 
@@ -64,7 +64,7 @@ The context menu item is created with registry entries only and simply provides 
 
 This program does NOT create a context menu handler. That is, there is no code that runs when you right-click a folder. Code only runs when you actually select an action (i.e. select a folder type that you want applied). SetFolderType will add no overhead to your context menu, other than the insignificant impact of one more context menu item.
 
-# How to Use
+## How to Use
 
 Right-click any folder and you should see the SetFolderType context menu:
 
@@ -72,25 +72,25 @@ Right-click any folder and you should see the SetFolderType context menu:
 
 Select the folder type you want applied to the folder. This will create (or edit any existing) **desktop.ini** file in the selected folder and ALL of its subfolders, all the way down the tree.
 
-## Patience!
+### Patience!
 
 Although SetFolderType is very fast at populating all the subfolders with **desktop.ini** files, it's up to Explorer to update the view. Explorer does that in the background as it notices the addition (or change) of the desktop.ini files. How long it will take is variable. It depends on the speed of the computer, what other processes are running, how many folders are affected, and so forth. But it can often take 30 seconds or so for all the folder views to update. So, before you jump onto GitHub and post an issue, relax, do something else for a minute and then go back and check your folders. You should see that Explorer did its thing and updated the view. 
 
-## The view won't change if you're looking at it!
+### The view won't change if you're looking at it!
 
 Explorer will not update the folder's view until the folder is closed. However, having an open folder only stops the view update for that particular folder level. The subfolder's views will update even if you have the parent folder open.
 
-## The target folder must be on a Local Disk that's formatted NTFS
+### The target folder must be on a Local Disk that's formatted NTFS
 
 If the target folder is not both a **Local Disk** and **NTFS**, an error message, indicating which criteria are met (or not), will be displayed. Here's all three error possibilities:
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/e5087ec9-1d2b-448a-b27a-f68cc6143828)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/214496f2-05a8-4287-9c1a-63617758b3a8)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/024cb983-49b6-4c0e-a6a8-28e5eab51d8f)
 
-## Remove Desktop.ini Files
+### Remove Desktop.ini Files
 
 If you select **(None)** from the context menu, SetFolderType will remove all desktop.ini files from the entire selected folder tree. This will work on all drive types and files systems. The check for Local Disk and NTFS is skipped for this action.
 
-# It's Multilingual!
+## It's Multilingual!
 
 Here's an example of SetFolderType installed for German (de-DE):
 
@@ -110,7 +110,7 @@ If the MUI file is found, the Install/Remove dialog will appear in the correct l
 
 **Note for Vietnamese**: On Windows 10, the file **C:\Windows\System32\vi-VN\Shell32.dll.mui** may be missing. Without this file, SetFolderType will not be able to provide a **Vietnamese** display. One way to fix this issue is to copy the missing file from a Windows 11 computer that has the Vietnamese language installed.
 
-# Help!
+## Help!
 
 Selecting **Help** from the context menu opens this Readme file.
 \
