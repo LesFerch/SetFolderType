@@ -37,7 +37,7 @@ As noted in the **Background** section above, setting the folder type via **desk
 1. Download the zip file using the link above.
 2. Extract **SetFolderType.exe**.
 3. Right-click **SetFolderType.exe**, select Properties, check **Unblock**, and click **OK**.
-4. Move **SetFolderType.exe** to the folder of your choice (you need to keep this file).
+4. Move **SetFolderType.exe** to the folder of your choice (you need to keep this file). Keep the **Language.ini** file with the Exe if your language is not English.
 5. Double-click **SetFolderType.exe** to open the Install/Remove dialog and click **Yes** to install.
 6. If you skipped step 3, then, in the SmartScreen window, click **More info** and then **Run anyway**.
 7. Click **OK** when the **Done** message box appears.
