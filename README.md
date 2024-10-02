@@ -16,6 +16,8 @@ Windows supports setting the folder type to one of **General items**, **Document
 
 However, there is a catch. Explorer only provides this functionality on drives that mount as **Local Disk** (aka "fixed disk") and are formatted **NTFS**. Therefore, this tool will work on all internal drives that are formatted **NTFS**, but it will only work on some USB drives. For example, SanDisk USB SSD drives mount as type **Local Disk**, so they will work with this tool if the drive is formatted to **NTFS**.
 
+**IMPORTANT**: This tool will have no effect if you have disabled *automatic folder type discovery* (e.g. WinSetView option "Make all folders Generic"). Explorer's automatic folder type discovery function checks the folder contents to determine and set the folder type. If it finds a `desktop.ini` file, the folder type setting in that file takes precedence.
+
 ### Partial Fix for Windows 11
 
 For **Windows 11**, this tool provides a partial fix for some broken funtionality in the Windows 11 Explorer. Specifically, the feature **Also apply this template to all subfolders** is completely broken in Windows 11 (assuming you have not patched Windows 11 to run the Windows 10 Explorer). Here's a [video](https://www.youtube.com/watch?v=U5eEFNZEWZg) demonstrating the issue.
