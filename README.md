@@ -26,7 +26,7 @@ The fix is partial because, as noted above, it only applies to drives of type **
 
 ### Permanent folder type setting for both Windows 10 and Windows 11
 
-For **Windows 10** (or [Windows 10 Explorer on Windows 11](https://lesferch.github.io/SwitchExplorer/)), the feature **Also apply this template to all subfolders** works fine, but there is still a scenario wher you may want this tool.
+For **Windows 10** (or [Windows 10 Explorer on Windows 11](https://lesferch.github.io/SwitchExplorer/)), the feature **Also apply this template to all subfolders** works fine, but there is still a scenario where you may want this tool.
 
 As noted in the **Background** section above, setting the folder type via **desktop.ini** files makes the folder type setting *permanent* because it's part of the folder, instead of just a registry setting.
 
