@@ -80,11 +80,18 @@ namespace SetFolderType
         static string sComplete = "Done";
         static string sLocalDisk = "Local Disk";
         static string sNTFS = "NTFS";
+        static bool ctrlKey = false;
+
+        [DllImport("user32.dll")]
+        public static extern short GetAsyncKeyState(int vKey);
 
         static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            ctrlKey = (GetAsyncKeyState(0x11) & 0x8000) != 0;
+
             lang = GetLang();
             if (lang.Substring(0, 2) != "en") { GetStrings(); }
 
@@ -125,7 +132,8 @@ namespace SetFolderType
 
                         if ((command == "/x") || DriveOK(driveLetter))
                         {
-                            ApplyFolderTypeRecursive(types[i], Folder);
+                            if (ctrlKey) ApplyFolderType(types[i], Folder);
+                            else ApplyFolderTypeRecursive(types[i], Folder);
                         }
                         else
                         {
@@ -289,7 +297,7 @@ namespace SetFolderType
         static void ApplyFolderTypeRecursive(string folderType, string directory)
         {
             // Apply to the selected folder
-            try { ApplyFolderType(directory, folderType); }
+            try { ApplyFolderType(folderType, directory); }
             catch { }
 
             // Recursively apply to subdirectories
@@ -301,7 +309,7 @@ namespace SetFolderType
             }
         }
 
-        static void ApplyFolderType(string directory, string folderType)
+        static void ApplyFolderType(string folderType, string directory)
         {
             string desktopIniPath = Path.Combine(directory, "desktop.ini");
 
