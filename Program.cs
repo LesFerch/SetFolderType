@@ -107,8 +107,9 @@ namespace SetFolderType
             for (int i = 0; i < args.Length; i++)
             {
                 if (args[i].StartsWith("/")) { command = args[i].ToLower(); }
-                else {
-                    Folder = args[i].Replace("\"","").Trim();
+                else
+                {
+                    Folder = args[i].Replace("\"", "").Trim();
                 }
             }
 
@@ -117,6 +118,8 @@ namespace SetFolderType
             if (command == "/remove") { RemoveContextMenuEntries(); }
 
             if (Folder == "") { return; }
+
+            CheckRegCmd(Folder);
 
             for (int i = 0; i < types.Length; i++)
             {
@@ -190,6 +193,32 @@ namespace SetFolderType
             return bOK;
         }
 
+        // Verify that the registry command ends with a quote (fixes bug from previous versions)
+        static void CheckRegCmd(string Folder)
+        {
+            bool QuoteFound = false;
+            try
+            {
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Classes\Directory\shell\SetFolderType\shell\0-Generic\command");
+                if (key != null)
+                {
+                    string value = key.GetValue("") as string;
+                    QuoteFound = value.EndsWith("\"");
+                    key.Close();
+                }
+            }
+            catch { }
+            if (!QuoteFound)
+            {
+                InstallContextMenuEntries();
+                if (!Folder.Contains("\\"))
+                {
+                    MessageBox.Show("Update applied to context menu registry entries. Please try again.", myName);
+                    Environment.Exit(0);
+                }
+            }
+        }
+
         static string GetLang()
         {
             string lang = "en-US";
@@ -232,27 +261,27 @@ namespace SetFolderType
                 return;
             }
 
-            sYes       = GetString(file, 33224); // Yes
-            sNo        = GetString(file, 33232); // No
-            sInstall   = GetString(file, 10210); // Install
-            sRemove    = GetString(file, 38314); // Remove
-            sComplete  = GetString(file, 12574); // Finished
-            sLocalDisk = GetString(file,  9315); // Local Disk
-            sMain      = GetString(file,  6495); // Folder View
-            labels[0]  = GetString(file, 29990); // General items
-            labels[1]  = GetString(file, 21770); // Documents
-            labels[2]  = GetString(file, 17451); // Pictures
-            labels[3]  = GetString(file, 17450); // Music
-            labels[4]  = GetString(file, 17452); // Videos
-            labels[5]  = GetString(file,  4256); // (None)
-            labels[6]  = GetString(file, 30489); // Help
+            sYes = GetString(file, 33224); // Yes
+            sNo = GetString(file, 33232); // No
+            sInstall = GetString(file, 10210); // Install
+            sRemove = GetString(file, 38314); // Remove
+            sComplete = GetString(file, 12574); // Finished
+            sLocalDisk = GetString(file, 9315); // Local Disk
+            sMain = GetString(file, 6495); // Folder View
+            labels[0] = GetString(file, 29990); // General items
+            labels[1] = GetString(file, 21770); // Documents
+            labels[2] = GetString(file, 17451); // Pictures
+            labels[3] = GetString(file, 17450); // Music
+            labels[4] = GetString(file, 17452); // Videos
+            labels[5] = GetString(file, 4256); // (None)
+            labels[6] = GetString(file, 30489); // Help
         }
         static string GetString(string file, int num)
         {
             ExtractData ed = new ExtractData();
             string sLocStr = ed.ExtractStringFromDLL(file, num);
             sLocStr = sLocStr.Replace("&", "");
-            // Remove and keyboard shortcut indicator from string
+            // Remove any keyboard shortcut indicator from string
             if (sLocStr.Length > 3) { sLocStr = Regex.Replace(sLocStr, @"\((.)\)", ""); }
             return sLocStr;
         }
@@ -279,7 +308,7 @@ namespace SetFolderType
 
                     using (RegistryKey commandKey = subKey.CreateSubKey("command"))
                     {
-                        commandKey.SetValue("", $"\"{exePath}\" {cmds[i]} %v");
+                        commandKey.SetValue("", $"\"{exePath}\" {cmds[i]} \"%v\"");
                     }
                 }
             }
