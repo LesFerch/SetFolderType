@@ -2,6 +2,8 @@
 
 ### Version 1.0.6
 
+
+
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/8462baf2-e131-436b-954e-ff7ee58b8c88)
 
 ## Set Windows Explorer folder types using Desktop.ini files
@@ -126,6 +128,7 @@ Selecting **Help** from the context menu opens this Readme file.
 \
 \
 [![image](https://github.com/LesFerch/WinSetView/assets/79026235/63b7acbc-36ef-4578-b96a-d0b7ea0cba3a)](https://github.com/LesFerch/SetFolderType)
+
 
 
 
