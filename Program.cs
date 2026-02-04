@@ -81,6 +81,7 @@ namespace SetFolderType
         static string sLocalDisk = "Local Disk";
         static string sNTFS = "NTFS";
         static bool ctrlKey = false;
+        static bool shiftKey = false;
 
         [DllImport("user32.dll")]
         public static extern short GetAsyncKeyState(int vKey);
@@ -91,6 +92,7 @@ namespace SetFolderType
             Application.SetCompatibleTextRenderingDefault(false);
 
             ctrlKey = (GetAsyncKeyState(0x11) & 0x8000) != 0;
+            shiftKey = (GetAsyncKeyState(0x10) & 0x8000) != 0;
 
             lang = GetLang();
             if (lang.Substring(0, 2) != "en") { GetStrings(); }
@@ -344,7 +346,26 @@ namespace SetFolderType
 
             if (folderType == "None")
             {
-                if (File.Exists(desktopIniPath)) { File.Delete(desktopIniPath); }
+                if (File.Exists(desktopIniPath))
+                {
+                    // If Shift key is held, force delete the file (old behavior)
+                    if (shiftKey)
+                    {
+                        File.Delete(desktopIniPath);
+                    }
+                    else
+                    {
+                        // Remove the FolderType entry
+                        IniFileHelper iniFile = new IniFileHelper(desktopIniPath);
+                        iniFile.WriteValue("ViewState", "FolderType", null);
+                        
+                        // Check if there are other meaningful entries
+                        if (!HasOtherEntries(desktopIniPath))
+                        {
+                            File.Delete(desktopIniPath);
+                        }
+                    }
+                }
                 return;
             }
 
@@ -357,6 +378,32 @@ namespace SetFolderType
                 CreateIniFile(desktopIniPath);
                 UpdateValue(desktopIniPath, "ViewState", "FolderType", folderType);
                 File.SetAttributes(desktopIniPath, File.GetAttributes(desktopIniPath) | FileAttributes.System | FileAttributes.Hidden);
+            }
+        }
+
+        static bool HasOtherEntries(string filePath)
+        {
+            try
+            {
+                string[] lines = File.ReadAllLines(filePath);
+                int entryCount = 0;
+                
+                foreach (string line in lines)
+                {
+                    string trimmedLine = line.Trim();
+                    // Count lines that contain "=" and are not empty
+                    if (trimmedLine.Contains("=") && !string.IsNullOrWhiteSpace(trimmedLine))
+                    {
+                        entryCount++;
+                    }
+                }
+                
+                // If there are other entries remaining, keep the file
+                return entryCount > 0;
+            }
+            catch
+            {
+                return true; // If we can't read the file, assume it has other entries to be safe
             }
         }
 
