@@ -32,7 +32,7 @@ As noted in the **Background** section above, setting the folder type via **desk
 
 ## How to Download and Install
 
-[![image](https://github.com/LesFerch/WinSetView/assets/79026235/0188480f-ca53-45d5-b9ff-daafff32869e)Download the zip file](https://github.com/LesFerch/SetFolderType/releases/download/1.0.5/SetFolderType.zip)
+[![image](https://github.com/LesFerch/WinSetView/assets/79026235/0188480f-ca53-45d5-b9ff-daafff32869e)Download the zip file](https://github.com/LesFerch/SetFolderType/releases/download/1.0.6/SetFolderType.zip)
 
 **Note**: Some antivirus software may falsely detect the download as a virus. This can happen any time you download a new executable and may require extra steps to whitelist the file.
 
@@ -90,9 +90,13 @@ If the target folder is not both a **Local Disk** and **NTFS**, an error message
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/e5087ec9-1d2b-448a-b27a-f68cc6143828)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/214496f2-05a8-4287-9c1a-63617758b3a8)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/024cb983-49b6-4c0e-a6a8-28e5eab51d8f)
 
-### Remove Desktop.ini Files
+### Remove FolderType Entry or Entirely Remove Desktop.ini Files
 
-If you select **(None)** from the context menu, SetFolderType will remove all desktop.ini files from the entire selected folder tree. This will work on all drive types and files systems. The check for Local Disk and NTFS is skipped for this action.
+If you select **(None)** from the context menu, SetFolderType will remove the **FolderType** entry from all desktop.ini files in the selected folder tree. If there are no other entries in the file, such as an icon setting, the desktop.ini file will be deleted. Hold down the **Shift** key to force deletion of desktop.ini files regardless of content.
+
+**Note**: This will work on all drive types and files systems. The check for Local Disk and NTFS is skipped for this action.
+
+**Note**: The **Ctrl** key can also be used to limit the action to the root of the current folder.
 
 ## It's Multilingual!
 
@@ -120,4 +124,5 @@ Selecting **Help** from the context menu opens this Readme file.
 \
 \
 [![image](https://github.com/LesFerch/WinSetView/assets/79026235/63b7acbc-36ef-4578-b96a-d0b7ea0cba3a)](https://github.com/LesFerch/SetFolderType)
+
 
