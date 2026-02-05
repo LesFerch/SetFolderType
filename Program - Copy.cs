@@ -69,7 +69,6 @@ namespace SetFolderType
     {
         static string myName = typeof(Program).Namespace;
         static string lang = "en-US";
-
         static string[] types = { "Generic", "Documents", "Pictures", "Music", "Videos", "None", "Help" };
         static string[] labels = { "General items", "Documents", "Pictures", "Music", "Videos", "(None)", "Help" };
         static string[] cmds = { "/g", "/d", "/p", "/m", "/v", "/x", "/h" };
@@ -203,7 +202,7 @@ namespace SetFolderType
             }
             catch { }
 
-            if (Array.IndexOf(folderTypes, v) >= 0)
+            if (v == "notspecified" || v == "generic" || v == "documents" || v == "music" || v == "pictures" || v == "videos" || v == "downloads")
             {
                 sAFTD = $"✗ {sAFTD}";
                 bOK = false;
@@ -462,17 +461,5 @@ namespace SetFolderType
             }
             return false;
         }
-
-        // List of folder types that, when hard set, may disable Automatic Folder Type Discovery
-        static string[] folderTypes = {
-            "notspecified", "accountpictures", "contacts", "contacts.library", "contacts.searchresults",
-            "documents", "documents.library", "documents.searchresults", "downloads", "fileitemapis",
-            "generic", "generic.library", "generic.searchresults", "homefolder", "music",
-            "music.library", "music.searchresults", "opensearch", "otherusers", "otherusers.searchresults",
-            "pictures", "pictures.library", "pictures.searchresults", "publisheditems", "publisheditems.searchresults",
-            "searchconnector", "searches", "storageproviderdocuments", "storageprovidergeneric", "storageprovidermusic",
-            "storageproviderpictures", "storageprovidervideos", "userfiles", "userfiles.searchresults",
-            "userslibraries", "userslibraries.searchresults", "videos", "videos.library", "videos.searchresults"
-        };
     }
 }
