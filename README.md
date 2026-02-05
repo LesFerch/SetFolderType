@@ -1,8 +1,6 @@
 # SetFolderType
 
-### Version 1.0.6
-
-
+### Version 1.0.7
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/8462baf2-e131-436b-954e-ff7ee58b8c88)
 
@@ -36,7 +34,7 @@ As noted in the **Background** section above, setting the folder type via **desk
 
 ## How to Download and Install
 
-[![image](https://github.com/LesFerch/WinSetView/assets/79026235/0188480f-ca53-45d5-b9ff-daafff32869e)Download the zip file](https://github.com/LesFerch/SetFolderType/releases/download/1.0.6/SetFolderType.zip)
+[![image](https://github.com/LesFerch/WinSetView/assets/79026235/0188480f-ca53-45d5-b9ff-daafff32869e)Download the zip file](https://github.com/LesFerch/SetFolderType/releases/download/1.0.7/SetFolderType.zip)
 
 **Note**: Some antivirus software may falsely detect the download as a virus. This can happen any time you download a new executable and may require extra steps to whitelist the file.
 
@@ -88,11 +86,19 @@ Although SetFolderType is very fast at populating all the subfolders with **desk
 
 Explorer will not update the folder's view until the folder is closed. However, having an open folder only stops the view update for that particular folder level. The subfolder's views will update even if you have the parent folder open.
 
-### The target folder must be on a Local Disk that's formatted NTFS
+### Requirements
 
-If the target folder is not both a **Local Disk** and **NTFS**, an error message, indicating which criteria are met (or not), will be displayed. Here's all three error possibilities:
+The target folder must be on a **Local Disk** that's formatted **NTFS** and **Automatic Folder Type Discovery** must be enabled.
 
-![image](https://github.com/LesFerch/SetFolderType/assets/79026235/e5087ec9-1d2b-448a-b27a-f68cc6143828)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/214496f2-05a8-4287-9c1a-63617758b3a8)  ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/024cb983-49b6-4c0e-a6a8-28e5eab51d8f)
+**Note**: Automatic Folder Type Discovery is normally enabled, but can be disabled by setting a registry value that makes all folders default to type "General Items". In [WinSetView](https://lesferch.github.io/WinSetView/), the setting is "Make all folders Generic".
+
+If requirements are not met, an error message, indicating which criteria are met (or not), will be displayed. The "Automatic Folder Type Discovery" requirement is represented by a magnifying glass character.
+
+Example errors:
+
+<img width="121" height="185" alt="image" src="https://github.com/user-attachments/assets/cad1d821-7cda-4324-8987-ed6b1be17739" />
+<img width="121" height="185" alt="image" src="https://github.com/user-attachments/assets/4165ed58-c8a3-4746-a9fd-aeec94d1d0e3" />
+<img width="121" height="185" alt="image" src="https://github.com/user-attachments/assets/4241b6f7-ea2c-4ea7-949c-728e81f0d5ba" />
 
 ### Remove FolderType Entry or Entirely Remove Desktop.ini Files
 
@@ -128,6 +134,7 @@ Selecting **Help** from the context menu opens this Readme file.
 \
 \
 [![image](https://github.com/LesFerch/WinSetView/assets/79026235/63b7acbc-36ef-4578-b96a-d0b7ea0cba3a)](https://github.com/LesFerch/SetFolderType)
+
 
 
 
