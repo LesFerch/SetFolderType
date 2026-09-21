@@ -1,5 +1,11 @@
 # SetFolderType
 
+> **NOTE:**
+>
+> The features of this program are now included in [Right-Click Tools](https://lesferch.github.io/RightClickTools/).
+>
+> Right-Click Tools also includes icon/thumbnail options and integrates with the modern Windows 11 context menu.
+
 ### Version 1.0.7
 
 ![image](https://github.com/LesFerch/SetFolderType/assets/79026235/8462baf2-e131-436b-954e-ff7ee58b8c88)
